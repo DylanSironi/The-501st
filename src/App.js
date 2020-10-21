@@ -11,13 +11,16 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Auth/>
-      <Header/>
-      <Home />
-      <Account/>
-      <Community/>
-      <Rules/>
-      <Game/>
+      {/* <img src='https://cdn.mos.cms.futurecdn.net/rXQiLcfc89vp3EbYQ58ERH-970-80.jpeg.webp' alt='stars'/> */}
+      <div className='components'>
+        <Auth />
+        <Header />
+        <Home />
+        <Account />
+        <Community />
+        <Rules />
+        <Game />
+      </div>
     </div>
   );
 }

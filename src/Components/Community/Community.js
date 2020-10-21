@@ -3,9 +3,14 @@ import React, { Component } from 'react';
 class Community extends Component {
     render() {
         return (
-            <div>
-                Community page
-            </div>
+            <section className='community'>
+                <div>
+                    Post
+                </div>
+                <div>
+                    Recent Posts
+                </div>
+            </section>
         )
     }
 }
