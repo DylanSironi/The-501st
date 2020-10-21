@@ -4,6 +4,7 @@ class Auth extends Component {
     render() {
         return (
             <section className='auth'>
+                <p>The 501st</p>
                 <img src='' alt='' />
                 <div className='inputs'>
                     <input placeholder='Username' />
@@ -11,8 +12,8 @@ class Auth extends Component {
                     <input placeholder='email' />
                 </div>
                 <div>
-                    <button onClick=''>Login</button>
-                    <button onClick=''>Register</button>
+                    <button>Login</button>
+                    <button>Register</button>
                 </div>
             </section>
         )
