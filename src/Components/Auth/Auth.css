@@ -1,0 +1,30 @@
+button{
+    color:black;
+    margin-top: 10px;
+    width: 100px;
+    position: relative;
+    border-radius: 0%;
+}
+input{
+    margin-top: 27%;
+}
+.title{
+    top: 56px;
+    background-color: rgb(3, 3, 3);
+    width: 100vw;
+    height: 70px;
+    border: none;
+    color: white;
+    font-size: xxx-large;
+}
+.logo{
+    margin-top: px;
+    z-index: 2;
+    height: 125px;
+    margin-top: 20px;
+}
+.auth-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

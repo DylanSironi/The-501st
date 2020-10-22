@@ -15,12 +15,11 @@ function App(props) {
   return (
     <div className="App">
       {props.location.pathname === '/' && <img src='https://cdn.hipwallpaper.com/i/64/56/IVUp5u.jpg' alt='stars'/> }
-      {props.location.pathname === '/' && <img src='' alt=''/> }
-      {props.location.pathname === '/' && <img src='' alt=''/> }
-      {props.location.pathname === '/' && <img src='' alt=''/> }
-      {props.location.pathname === '/' && <img src='' alt=''/> }
-      {props.location.pathname === '/' && <img src='' alt=''/> }
-      {props.location.pathname === '/' && <img src='' alt=''/> }
+      {props.location.pathname === '/account' && <img className='background' src='https://i1.wp.com/opendoorpride.org/wp-content/uploads/2017/05/simple-one-color-grey-background-1920x1200.jpg?ssl=1' alt='grey'/> }
+      {props.location.pathname === '/home' && <img className='background' src='https://i1.wp.com/opendoorpride.org/wp-content/uploads/2017/05/simple-one-color-grey-background-1920x1200.jpg?ssl=1' alt='grey'/> }
+      {props.location.pathname === '/community' && <img className='background' src='https://i1.wp.com/opendoorpride.org/wp-content/uploads/2017/05/simple-one-color-grey-background-1920x1200.jpg?ssl=1' alt='grey'/> }
+      {props.location.pathname === '/rules' && <img className='background' src='https://i1.wp.com/opendoorpride.org/wp-content/uploads/2017/05/simple-one-color-grey-background-1920x1200.jpg?ssl=1' alt='grey'/> }
+      {props.location.pathname === '/game' && <img className='background' src='https://i1.wp.com/opendoorpride.org/wp-content/uploads/2017/05/simple-one-color-grey-background-1920x1200.jpg?ssl=1' alt=''/> }
       <div className='components'>
       {props.location.pathname !== '/' && <Header /> }
       {routes}

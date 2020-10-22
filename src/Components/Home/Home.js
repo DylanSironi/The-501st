@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import './Home.css'
 
 class Home extends Component {
     render() {
         return (
-            <section className='homepage'>
-                <p>Welcome to the 501st Legion</p>
-                <button>Community</button>
-                <button>Rules and Objectives</button>
-                <button>Game Coming Soon</button>
-            </section>
+            <div className='homepage'>
+                <button className='button' id='button1'><Link to='/community'>Community</Link></button>
+                <button className='button' id='button2'><Link to='/rules'>Rules and Objectives</Link></button>
+                <button className='button' id='button3'><Link to='/game'>Game Coming Soon</Link></button>
+            </div>
         )
     }
 }
