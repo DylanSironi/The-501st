@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css'
 
 class Header extends Component {
@@ -7,7 +8,7 @@ class Header extends Component {
             <div className='header-container'>
                     <img  className='logo' src='https://cdn.custom-cursor.com/cursors/pack2150.png' alt='clone trooper' />
                     <div> {this.props.username}</div>
-                    <button className='account' onclick=''>Account</button>
+                    <button className='account'><Link to ='/account'>Account</Link></button>
             </div>
         )
     }
