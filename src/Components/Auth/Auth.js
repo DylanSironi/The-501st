@@ -3,7 +3,7 @@ import axios from 'axios'
 import { connect } from 'react-redux';
 import { getUser } from '../../ducks/reducer';
 import './Auth.css';
- 
+
 class Auth extends Component {
     constructor(props) {
         super(props);
@@ -17,7 +17,7 @@ class Auth extends Component {
         this.setState({ [event.target.name]: event.target.value })
     }
     handleRegister = () => {
-        const { username, password, email} = this.state;
+        const { username, password, email } = this.state;
         axios.post('/api/register', { username, password, email })
             .then(res => {
                 this.props.getUser(res.data);
@@ -28,7 +28,7 @@ class Auth extends Component {
     handleLogin = () => {
         const { username, password, email } = this.state;
 
-        axios.post('/api/login', { username, password, email})
+        axios.post('/api/login', { username, password, email })
             .then(res => {
                 console.log(res.data)
                 this.props.getUser(res.data);
@@ -43,38 +43,41 @@ class Auth extends Component {
                 this.props.history.push('/');
             })
             .catch(err => console.log(err))
-            // console.log(this.state)
+        // console.log(this.state)
     }
     render() {
         return (
-            <section className='auth'>
+            <section className='auth' style={{ background: "url(https://i1.wp.com/opendoorpride.org/wp-content/uploads/2017/05/simple-one-color-grey-background-1920x1200.jpg?ssl=1)" }}>
                 <div className='auth-header'>
-                    <img className='logo' src='https://cdn.custom-cursor.com/cursors/pack2150.png' alt='clone trooper' />
-                    <button className='title'>Welcome to the 501st Legion</button>
+                    <img className='auth-logo' src='https://cdn.custom-cursor.com/cursors/pack2150.png' alt='clone trooper' />
+                    <div className='title'>Welcome to the 501st Legion</div>
                 </div>
-                <div className='inputs'>
-                    <input 
-                    value={this.state.username} 
-                    placeholder='Username' 
-                    name='username'
-                    onChange={(e) => this.handleInput(e)} />
+                <div className='login-box'>
+                    <div className='log-title'>Login</div>
+                    <div className='inputs'>
+                        <input className='input1'
+                            value={this.state.username}
+                            placeholder='Username'
+                            name='username'
+                            onChange={(e) => this.handleInput(e)} />
 
-                    <input
-                    value={this.state.password}
-                    name='password'
-                    onChange={(e) => this.handleInput(e)}
-                    placeholder='Password' 
-                    type='password' />
-                    
-                    <input 
-                    placeholder='email' 
-                    value={this.state.email} 
-                    name='email'
-                    onChange={(e) => this.handleInput(e)}/>
-                </div>
-                <div>
-                    <button onClick={this.handleLogin}>Login</button>
-                    <button onClick={this.handleRegister}>Register</button>
+                        <input
+                            value={this.state.password}
+                            name='password'
+                            onChange={(e) => this.handleInput(e)}
+                            placeholder='Password'
+                            type='password' />
+
+                        <input
+                            placeholder='email'
+                            value={this.state.email}
+                            name='email'
+                            onChange={(e) => this.handleInput(e)} />
+                    </div>
+                    <div className='buttons'>
+                        <button onClick={this.handleLogin}>Login</button>
+                        <button onClick={this.handleRegister}>Register</button>
+                    </div>
                 </div>
             </section>
         )

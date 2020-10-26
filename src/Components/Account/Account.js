@@ -14,15 +14,15 @@ class Account extends Component {
     render() {
         console.log(this.props)
         return (
-            <section className='account-section'>
-                <button className='account-menu'>
+            <section className='account-section' style={{background: "url(https://i1.wp.com/opendoorpride.org/wp-content/uploads/2017/05/simple-one-color-grey-background-1920x1200.jpg?ssl=1)"}}>
+                <div className='account-menu'>
                     <p>Your current Username is {this.props.user.username}</p>
                     <input placeholder='change username'/>
                     <button>Change</button>
                     <p>Your current Email is {this.props.user.email}</p>
                     <input className='email-input' placeholder='change email'/>
                     <button>Change</button>
-                </button>
+                </div>
             </section>
         )
     }
