@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const express = require('express'),
       massive = require('massive'),
-    //   Ctrl = require('./ctrlr'),
+      Ctrl = require('./ctrlr'),
       session = require('express-session'),
 
       {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env,
@@ -27,6 +27,9 @@ massive({
 });
 
 //auth endpoints
+app.post('/api/register', Ctrl.register);
+app.post('/api/login', Ctrl.login);
+app.post('/api/logout', Ctrl.logout);
 
 
 //post endpoints

@@ -1,10 +1,11 @@
 const initialState = {
     user: {
       username: '',
+      email: '',
       userId: 0
     }
   }
-  
+ 
   const GET_USER = 'GET_USER';
   const UPDATE_USER = 'UPDATE_USER';
   const LOGOUT_USER = 'LOGOUT_USER';
