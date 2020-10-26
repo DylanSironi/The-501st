@@ -1,0 +1,16 @@
+.account-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 7.5%;
+}
+.account-menu{
+    background-color: white;
+    width: 250PX
+}
+.email-input{
+    margin-bottom: 50px;
+}
+p{
+    margin-top: 25%;
+}
