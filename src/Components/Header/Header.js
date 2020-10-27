@@ -23,4 +23,4 @@ class Header extends Component {
     }
 }
 const mapStateToProps = reduxState => reduxState;
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps)(Header)
