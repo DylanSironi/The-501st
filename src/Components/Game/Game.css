@@ -3,38 +3,28 @@
     height: 100vh;
 }
 .troops{
-    height: 10%;
+    height: 21%;
     /* width: 75%; */
     background-color: white;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
-#el{
+#et{
     
 }
-#ec{
-    margin-top: 5%;
-}
-#mc{
-    margin-top: 5%;
-}
-#ml{
+#mt{
     margin-top: 5%;
 }
 #cards{
     margin: 2.5%;
-}
-img{
-    width: 10%;
-}
-.cards{
- /* display: flex;    */
 }
 .troop-flex {
     display: flex;
     justify-content: space-evenly;
     /* flex-wrap: wrap; */
     font-size: small;
+    color: white;
+    font-size: x-large;
   }
   .trooper-flex {
     display: flex;

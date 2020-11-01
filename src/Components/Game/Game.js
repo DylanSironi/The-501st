@@ -51,10 +51,8 @@ class Game extends Component {
     render() {
         return (
             <section className='game' style={{ background: "url(https://i1.wp.com/opendoorpride.org/wp-content/uploads/2017/05/simple-one-color-grey-background-1920x1200.jpg?ssl=1)" }}>
-                <div className='troops' id='el'>enemy long range troops</div>
-                <div className='troops' id='ec'>enemy close range troops</div>
-                <div className='troops' id='mc'>my close range troops</div>
-                <div className='troops' id='ml'>my long range troops</div>
+                <div className='troops' id='et'>enemy long range troops</div>
+                <div className='troops' id='mt'>my long range troops</div>
                 <div id='cards'>
                     <Recruiter
                         recruitFn={this.recruitTroopers} />

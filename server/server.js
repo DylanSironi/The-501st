@@ -29,6 +29,8 @@ massive({
 
 app.get('/api/open-cards', cardCtrl.getOpenTroopers);
 
+app.post('/api/my-troopers', Ctrl.recruitTroopers);
+
 //auth endpoints
 app.post('/api/register', Ctrl.register);
 app.post('/api/login', Ctrl.login);
