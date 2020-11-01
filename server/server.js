@@ -2,8 +2,9 @@ require('dotenv').config();
 
 const express = require('express'),
       massive = require('massive'),
-      Ctrl = require('./ctrlr'),
+      Ctrl = require('./controllers/ctrlr'),
       session = require('express-session'),
+      cardCtrl = require('./controllers/cardCtrl'),
 
       {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env,
       port = SERVER_PORT,
@@ -25,6 +26,8 @@ massive({
     app.set('db', db);
     console.log('db connected');
 });
+
+app.get('/api/open-cards', cardCtrl.getOpenTroopers);
 
 //auth endpoints
 app.post('/api/register', Ctrl.register);

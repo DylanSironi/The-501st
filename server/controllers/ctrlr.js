@@ -1,4 +1,7 @@
 const bcrypt = require('bcryptjs');
+const troopers = require('../controllers/arrayCtrl');
+const myTroopers = [];
+let id = 1;
 
 module.exports = {
     register: async (req, res) => {
@@ -43,4 +46,13 @@ module.exports = {
     //     const {userId} = req.params
     //     if ()
     // }
+    playCard: (req, res, ) => {
+        const {troopers} = req.body;
+        // const troopers = require('../ArrayCtrl');
+        troopers.id = id;
+        id++;
+
+        myTroopers.push(troopers);
+        res.status(200).send(myTroopers);
+    },
 }

@@ -2,3 +2,59 @@
     width: 100vw;
     height: 100vh;
 }
+.troops{
+    height: 10%;
+    /* width: 75%; */
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#el{
+    
+}
+#ec{
+    margin-top: 5%;
+}
+#mc{
+    margin-top: 5%;
+}
+#ml{
+    margin-top: 5%;
+}
+#cards{
+    margin: 2.5%;
+}
+img{
+    width: 10%;
+}
+.cards{
+ /* display: flex;    */
+}
+.troop-flex {
+    display: flex;
+    justify-content: space-evenly;
+    /* flex-wrap: wrap; */
+    font-size: small;
+  }
+  .trooper-flex {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    image-rendering: optimizeSpeed;
+    font-size: small;
+  }
+  h1{
+    background-color: rgb(61, 61, 141);
+    color: white;
+    font-size: xxx-large;
+  }
+  /* button{
+    background-color: rgb(56, 56, 117);
+    color: white;
+  } */
+  img{
+    width: 10vw;
+    height: 20vh;
+    border-radius: 5%;
+    background-color: white;
+  }
