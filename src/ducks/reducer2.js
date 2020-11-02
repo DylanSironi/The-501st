@@ -8,7 +8,7 @@ const initialState = {
 
   const GET_POST = 'GET_POST';
   const UPDATE_POST = 'UPDATE_POST';
-  const LOGOUT_POST = 'LOGOUT_POST';
+  const DELETE_POST = 'DELETE_POST';
 
   export function getpost(postObj) {
     return {
@@ -17,14 +17,14 @@ const initialState = {
     }
   }
   
-  export function logout() {
+  export function DELETE() {
     return {
-      type: LOGOUT_POST,
+      type: DELETE_POST,
       payload: {}
     }
   }
   
-  export function updatepost(post) {
+  export function updatePost(post) {
     return {
       type: UPDATE_POST,
       payload: post
@@ -36,12 +36,12 @@ const initialState = {
     const { type, payload } = action
   
     switch (type) {
-      case LOGOUT_POST:
+      case DELETE_POST:
         return initialState;
       case GET_POST:
         return { ...state, post: payload };
       case UPDATE_POST:
-        return { ...state, postname: payload.post.postname, postId: payload.post.postId };
+        return { ...state, username: payload.post.username, userId: payload.post.postId };
       default:
         return state;
     }
