@@ -1,0 +1,29 @@
+.community{
+    height: 100vh;
+    width: 100vw;
+}
+.post{
+    /* display: flex; */
+    background-color: rgb(24, 24, 24);
+    height: 100vh;
+    width: 80vw;
+    justify-content: center;
+    margin-left: 10vw;
+}
+#posty{
+    width: 70vw;
+    background-color: white;
+}
+#recent{
+    /* display: flex;
+    justify-content: center;
+    justify-content: center; */
+    height: 35vh;
+    width: 70vw;
+    margin-left: 5vw;
+    background-color: rgb(255, 255, 255);
+}
+#post-button{
+    background-color: white;
+
+}

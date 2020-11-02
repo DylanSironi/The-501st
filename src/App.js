@@ -8,7 +8,7 @@ import Header from './Components/Header/Header';
 // import Game from './Components/Game/Game';
 import { withRouter } from 'react-router-dom'
 import routes from './routes'
-import './App.css';
+import './App.scss';
 
 function App(props) {
   // console.log(props.location.pathname)

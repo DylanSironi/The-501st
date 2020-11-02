@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
-import './Community.css'
+import { connect } from 'react-redux';
+import './Community.scss'
 
 class Community extends Component {
     render() {
         return (
             <section className='community' style={{background: "url(https://i1.wp.com/opendoorpride.org/wp-content/uploads/2017/05/simple-one-color-grey-background-1920x1200.jpg?ssl=1)"}}>
                 <div className='post'>
-                    <input placeholder='Post'/>
-                    <button>Post</button>
-                </div>
-                <div>
-                    Recent Posts
+                <div id='recent'>{this.props.posts}Recent</div>
+                    <input id='posty' placeholder='Type here'/>
+                    <button id='post-button'>Post</button>
                 </div>
             </section>
         )
     }
 }
-export default Community
+
+const mapStateToProps = reduxState => reduxState;
+export default connect(mapStateToProps)(Community);

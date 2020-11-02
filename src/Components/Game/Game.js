@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Recruiter from './Recruiter';
 import Roster from './Roster';
 import axios from 'axios';
-import './Game.css'
+import './Game.scss'
 
 class Game extends Component {
     constructor(props) {

@@ -15,3 +15,7 @@ matchId integer,
 foreign key (userId) references users(userId),
 foreign key (matchId) references match(matchId)
 );
+
+-- create table posts(
+--     postid 
+-- )

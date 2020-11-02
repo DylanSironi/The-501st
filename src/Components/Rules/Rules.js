@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Rules.css'
+import './Rules.scss'
 
 class Rules extends Component {
     render() {

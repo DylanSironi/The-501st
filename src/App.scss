@@ -1,8 +1,11 @@
+$font-stack: monospace;
+
 .App {
   text-align: center;
   display: flex;
   justify-content: center;
   text-decoration: none;
+  font: 100% $font-stack;
 }
 
 img {
