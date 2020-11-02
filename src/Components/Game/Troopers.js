@@ -26,7 +26,22 @@ class Troopers extends Component {
         return (
             <div>
                 <img src={this.props.troopers.image} alt={this.props.troopers.name}/>
-                <p>{this.props.troopers.name}</p>
+                {this.state.isEditing
+                ? (
+                    <div>
+                        <input className='gamer'
+                            value={this.state.nameInput}
+                            onChange={e => this.handleInput(e.target.value)}/>
+                        <button className='gamer' onClick={() => this.handleEdit(this.props.troopers.id)}>Submit</button>
+                    </div>
+                )
+                : (
+                    <div>
+                        <p>{this.props.troopers.name}</p>
+                        <button className='gamer' onClick={this.handleToggle}>Edit Value</button>
+                    </div>
+                )}
+                <button className='gamer' onClick={() => this.props.KIAFn(this.props.troopers.id)}>Reset</button>
             </div>
         )
     }

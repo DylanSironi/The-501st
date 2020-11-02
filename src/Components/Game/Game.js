@@ -5,13 +5,13 @@ import axios from 'axios';
 import './Game.css'
 
 class Game extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-          myTroopers: []
+            myTroopers: []
         }
         this.recruitTroopers = this.recruitTroopers.bind(this);
-      }
+    }
 
     componentDidMount() {
 
@@ -52,16 +52,17 @@ class Game extends Component {
         return (
             <section className='game' style={{ background: "url(https://i1.wp.com/opendoorpride.org/wp-content/uploads/2017/05/simple-one-color-grey-background-1920x1200.jpg?ssl=1)" }}>
                 <div className='troops' id='et'>enemy long range troops</div>
-                <div className='troops' id='mt'>my long range troops</div>
-                <div id='cards'>
-                    <Recruiter
-                        recruitFn={this.recruitTroopers} />
+                <div className='troops' id='mt'>
                     <Roster
                         myTroopers={this.state.myTroopers}
                         nameFn={this.editName}
                         KIAFn={this.KIATroopers} />
                 </div>
-            </section>
+                <div id='cards'>
+                    <Recruiter
+                        recruitFn={this.recruitTroopers} />
+                </div>
+            </section> 
         )
     }
 }

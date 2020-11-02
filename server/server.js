@@ -30,6 +30,8 @@ massive({
 app.get('/api/open-cards', cardCtrl.getOpenTroopers);
 
 app.post('/api/my-troopers', Ctrl.recruitTroopers);
+app.put('/api/my-troopers/:id', Ctrl.editName);
+app.delete('/api/my-troopers/:id', Ctrl.KIATroopers);
 
 //auth endpoints
 app.post('/api/register', Ctrl.register);
