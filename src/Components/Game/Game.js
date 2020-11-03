@@ -13,14 +13,13 @@ class Game extends Component {
         this.recruitTroopers = this.recruitTroopers.bind(this);
     }
 
-    componentDidMount() {
-
-        axios.get('/api/my-troopers')
-            .then(res => {
-                this.setState({ myTroopers: res.data })
-            })
-            .catch(err => console.log(err));
-    }
+    // componentDidMount() {
+    //     axios.get('/api/open-cards')
+    //         .then(res => {
+    //             this.setState({ myTroopers: res.data })
+    //         })
+    //         .catch(err => console.log(err));
+    // }
 
     recruitTroopers(troopers) {
         axios.post('/api/my-troopers', { troopers: troopers })

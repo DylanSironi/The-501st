@@ -1,4 +1,4 @@
-const { reduceRight } = require('./controllers/arrayCtrl');
+// const { reduceRight } = require('./controllers/arrayCtrl');
 
 require('dotenv').config();
 
