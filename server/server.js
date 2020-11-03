@@ -1,5 +1,8 @@
+const { reduceRight } = require('./controllers/arrayCtrl');
+
 require('dotenv').config();
 
+const path = require('path')
 const express = require('express'),
       massive = require('massive'),
       Ctrl = require('./controllers/ctrlr'),
@@ -27,6 +30,8 @@ massive({
     console.log('db connected');
 });
 
+
+//game endpoints
 app.get('/api/open-cards', cardCtrl.getOpenTroopers);
 
 app.post('/api/my-troopers', Ctrl.recruitTroopers);
@@ -44,5 +49,12 @@ app.post('/api/logout', Ctrl.logout);
 
 //user endpoints
 
+
+
+app.use(express.static(__dirname + '/../build'))
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../build/index.html'))
+})
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
