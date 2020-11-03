@@ -51,7 +51,7 @@ class Game extends Component {
     render() {
         return (
             <section className='game' style={{ background: "url(https://i1.wp.com/opendoorpride.org/wp-content/uploads/2017/05/simple-one-color-grey-background-1920x1200.jpg?ssl=1)" }}>
-                <div className='troops' id='et'>enemy long range troops</div>
+                <div className='troops' id='et'>Enemy Troops</div>
                 <div className='troops' id='mt'>
                     <Roster
                         myTroopers={this.state.myTroopers}

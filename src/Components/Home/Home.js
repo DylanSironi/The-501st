@@ -8,7 +8,7 @@ class Home extends Component {
             <div className='homepage' style={{background: "url(https://i1.wp.com/opendoorpride.org/wp-content/uploads/2017/05/simple-one-color-grey-background-1920x1200.jpg?ssl=1)"}}>
                 <button className='button' id='button1'><Link to='/community'>Community</Link></button>
                 <button className='button' id='button2'><Link to='/rules'>Rules and Objectives</Link></button>
-                <button className='button' id='button3'><Link to='/game'>Game Coming Soon</Link></button>
+                <button className='button' id='button3'><Link to='/game'>Game</Link></button>
             </div>
         )
     }
