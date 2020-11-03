@@ -26,4 +26,35 @@
         height: 10.5vh;
     }
 }
+@media(max-width: 1500px){
+    .community{
+      .post{
+         width: 70vw;
+         margin-left: 15vw; 
+      } 
+      .recent{
+          width: 60vw;
+          height: 55vh;
+      }
+      .posty{
+          width: 55vw;
+      } 
+    }
+}
+@media(max-width: 800px){
+    .community{
+      .post{
+         width: 75vw;
+         margin-left: 15vw; 
+      } 
+      .recent{
+          width: 60vw;
+          height: 60vh;
+          margin-left: 7.5vw;
+      }
+      .posty{
+          width: 55vw;
+      } 
+    }
+}
 

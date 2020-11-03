@@ -1,3 +1,7 @@
+$font-size-small: medium;
+$font-size-medium: larger;
+$font-size-xsmall: x-small;
+
 .rules{
     width: 100vw;
     height: 100vh;
@@ -38,6 +42,63 @@
         }
         .card-type{
             margin-top: 2vh;
+        }
+    }
+}
+
+@media(max-width: 1500px){
+    .rules{
+        font-size: $font-size-small;
+        width: 100vw;
+        height: 95vh;
+        justify-content: space-between;
+        .rules-div{
+            width: 37vw;
+            height: 75vh;
+            .para{
+              font-size: $font-size-medium;
+              margin-top: 7vh;
+              margin-left: 35%;  
+            }
+        }
+        .objectives-div{
+            width: 37vw;
+            height: 75vh;
+            .type{
+                font-size: $font-size-small;
+              margin-top: 5vh;
+              margin-left: 30%;
+            }
+        }
+    }
+}
+@media(max-width: 850px){
+    .rules{
+        width: 100vw;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        font-size: $font-size-xsmall;
+        .rules-div{
+            width: 70vw;
+            height: 45vh;
+            margin: 5px 15vw;
+            .para{
+                margin-top: 7vh;
+                margin-left: 35%;
+                width: 20vw;  
+            }
+        }
+        .objectives-div{
+            width: 70vw;
+            height: 45vh;
+            margin: 10px 15vw;
+            .type{
+                margin-top: 5vh;
+                margin-left: 25%;
+                width: 35vw;
+                font-size: $font-size-xsmall;
+            }
         }
     }
 }

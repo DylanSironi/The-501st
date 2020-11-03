@@ -10,7 +10,7 @@ module.exports = [
     {id: 9, name: 6, rank: 'Captain', soldierName: 'Vaughn', url: 'https://i.redd.it/d2d7cjeoxm651.jpg'},
     {id: 10, name: 6, rank: 'Private', soldierName: 'Heavy', url: 'https://i.pinimg.com/236x/10/b7/b6/10b7b67def0a51719ba8b7af79f8c8dc.jpg'},
     {id: 11, name: 6, rank: 'Private', soldierName: 'Hard Case', url: 'https://i.pinimg.com/564x/3e/9b/30/3e9b30a9f61e99b48e385208139464e9.jpg'},
-    {id: 12, name: 3, rank: 'Private', soldierName: 'Dogma', url: 'https://i.pinimg.com/originals/92/0e/a4/920ea449afaaecaa05950247c11c8b71.jpg'},
+    {id: 12, name: -3, rank: 'Private', soldierName: 'Dogma', url: 'https://i.pinimg.com/originals/92/0e/a4/920ea449afaaecaa05950247c11c8b71.jpg'},
     {id: 13, name: 4, rank: 'Private', soldierName: 'Tup', url: 'https://vignette.wikia.nocookie.net/starwars/images/c/cc/Tup-SWE.jpg/revision/latest?cb=20111112045047'},
     {id: 14, name: 5, rank: 'Commander', soldierName: 'Bly', url: 'https://i.pinimg.com/originals/ed/8b/fd/ed8bfd90524e46843b6778c12ce6f0b6.jpg'},
     {id: 15, name: 5, rank: 'Commander', soldierName: 'Neyo', url: 'https://i.pinimg.com/originals/e6/a3/75/e6a3758f534cfc7c1fe188067efb73de.jpg'},

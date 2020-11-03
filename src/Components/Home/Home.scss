@@ -30,3 +30,51 @@
         color: black;
     }
 }
+@media(max-width: 800px){
+    .homepage{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 95vh;
+        #button1{
+            width: 200px;
+            height: 200px;
+        }
+        #button2{
+            width: 200px;
+            height: 200px;
+        }
+        #button3{
+            width: 200px;
+            height: 200px;
+        }
+    }
+}
+@media(min-width: 1200px){
+    .homepage{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 95vh;
+        #button1{
+            width: 700px;
+            height: 500px;
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+        #button2{
+            width: 700px;
+            height: 500px;
+            margin-bottom: 25px;
+        }
+        #button3{
+            width: 700px;
+            height: 500px;
+            margin-bottom: 25px;
+        }
+    }
+}

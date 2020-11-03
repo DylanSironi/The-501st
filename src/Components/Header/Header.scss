@@ -1,3 +1,6 @@
+$font-size-small: x-small;
+$font-size-medium: medium;
+
 .header-container{
     display: flex;
     justify-content: space-between;
@@ -6,7 +9,7 @@
     height: 15vh;
     background-color: rgb(24, 24, 24);
     .logo{
-        height: 9vh;
+        height: 100px;
         margin-top: 1%;
     }
     .account{
@@ -24,4 +27,49 @@
         margin-top: 50px;
         margin-right: 5%;
     }
+}
+@media(max-width: 1500px){
+    .header-container{
+        height: 12vh;
+        .username{
+            margin-top: 4vh;
+            font-size: large;
+            margin-right: 15vw;
+            // font-size: $font-size-medium;
+        }
+        .account{
+            width: 90px;
+            height: 90px;
+            margin-top: 5px;
+            margin-right: 1px;
+            font-size: $font-size-medium;
+        }
+        .logo{
+            height: 90px;
+            margin-top: 1%;
+        }
+    }
+}
+
+@media(max-width: 750px){
+    .header-container{
+        height: 10vh;
+        .username{
+            margin-top: 4vh;
+            font-size: large;
+            margin-right: 15vw;
+            font-size: $font-size-small;
+        }
+        .account{
+            width: 8vh;
+            height: 8vh;
+            margin-top: 5px;
+            margin-right: 1px;
+            font-size: $font-size-small;
+        }
+        .logo{
+            height: 9vh;
+            margin-top: 1%;
+        }
+    } 
 }
