@@ -35,12 +35,16 @@ massive({
 app.get('/api/open-cards', cardCtrl.getOpenTroopers);
 
 app.post('/api/my-troopers', Ctrl.recruitTroopers);
+
 app.put('/api/my-troopers/:id', Ctrl.editName);
+
 app.delete('/api/my-troopers/:id', Ctrl.KIATroopers);
 
 //auth endpoints
 app.post('/api/register', Ctrl.register);
+
 app.post('/api/login', Ctrl.login);
+
 app.post('/api/logout', Ctrl.logout);
 
 
@@ -48,8 +52,6 @@ app.post('/api/logout', Ctrl.logout);
 
 
 //user endpoints
-
-
 
 app.use(express.static(__dirname + '/../build'))
 
