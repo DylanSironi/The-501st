@@ -1,50 +1,36 @@
-import React, {Component} from 'react';
+import React, { useState } from 'react';
 
-class Troopers extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            isEditing: false,
-            nameInput: ''
-        }
+function Troopers(props) {
+    let [isEditing, setIsEditing] = useState(false)
+    let [nameInput, setNameInput] = useState('')
+
+    const handleEdit = (id) => {
+        props.nameFn(id, nameInput);
+        setIsEditing(!isEditing);
     }
 
-    handleInput = (val) => {
-        this.setState({nameInput: val})
-    }
 
-    handleToggle = () => {
-        this.setState({isEditing: !this.state.isEditing})
-    }
-
-    handleEdit = (id) => {
-        this.props.nameFn(id, this.state.nameInput);
-        this.handleToggle();
-    }
-
-    render(){
-        return (
-            <div>
-                <img src={this.props.troopers.image} alt={this.props.troopers.name}/>
-                {this.state.isEditing
+    return (
+        <div>
+            <img src={props.troopers.image} alt={props.troopers.name} />
+            {isEditing
                 ? (
                     <div>
                         <input className='gamer'
-                            value={this.state.nameInput}
-                            onChange={e => this.handleInput(e.target.value)}/>
-                        <button className='gamer' onClick={() => this.handleEdit(this.props.troopers.id)}>Submit</button>
+                            value={nameInput}
+                            onChange={e => setNameInput(e.target.value)} />
+                        <button className='gamer' onClick={() => handleEdit(props.troopers.id)}>Submit</button>
                     </div>
                 )
                 : (
                     <div>
-                        <p>{this.props.troopers.name}</p>
-                        <button className='gamer' onClick={this.handleToggle}>Edit Value</button>
+                        <p>{props.troopers.name}</p>
+                        <button className='gamer' onClick={()=>{setIsEditing(!isEditing)}}>Edit Value</button>
                     </div>
                 )}
-                <button className='gamer' onClick={() => this.props.KIAFn(this.props.troopers.id)}>Reset</button>
-            </div>
-        )
-    }
+            <button className='gamer' onClick={() => props.KIAFn(props.troopers.id)}>Reset</button>
+        </div>
+    )
 }
 
 export default Troopers;

@@ -1,40 +1,33 @@
-import React, {Component} from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import HoloCharts from './HoloCharts';
 
-class Recruiter extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            openTroopers: []
-        }
-    }
+function Recruiter(props) {
+    let [openTroopers, setOpenTroopers] = useState([])
 
-    componentDidMount(){
-        this.getOpenTroopers();
-    }
+    useEffect(()=>{
+        getOpenTroopers()
+    }, 
+    [])
 
-    getOpenTroopers = () => {
+    const getOpenTroopers = () => {
         axios.get('/api/open-cards')
-        .then(res => {
-            this.setState({openTroopers: res.data})
-        })
-        .catch(err => console.log(err))
+            .then(res => {
+                setOpenTroopers(res.data)
+            })
+            .catch(err => console.log(err))
     }
-
-    render(){
-        const mappedTroopers = this.state.openTroopers.map((troopers, i) => (
-            <HoloCharts 
+        const mappedTroopers = openTroopers.map((troopers, i) => (
+            <HoloCharts
                 key={i}
                 troopers={troopers}
-                recruitFn={this.props.recruitFn}
-                refreshFn={this.getOpenTroopers}/>
+                recruitFn={props.recruitFn}
+                refreshFn={getOpenTroopers} />
         ))
         return (
             <div className='troop-flex'>
                 {mappedTroopers}
             </div>
         )
-    }
 }
 export default Recruiter;
